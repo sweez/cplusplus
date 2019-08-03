@@ -5,7 +5,7 @@ Today, you will learn
 • The steps to develop a C++ program
 • How to enter, compile, and link your first working C++ program
 
-Note 1
+Notes:
 
 The word program is used in two ways: to describe individual instructions
 (or source code) created by the programmer, and to describe an entire piece of executable software. 
@@ -13,7 +13,6 @@ This distinction can cause enormous confusion, so this book tries to distinguish
 
 
 
-Note 2:
 Procedural, Structured, and Object-Oriented Programming
 
 Procedural:
