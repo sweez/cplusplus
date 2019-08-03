@@ -1,1 +1,51 @@
 Day 1 Notes & Answers
+
+Today, you will learn
+• Why C++ is a standard in software development
+• The steps to develop a C++ program
+• How to enter, compile, and link your first working C++ program
+
+Note 1
+{
+	The word program is used in two ways: to describe individual instructions
+	(or source code) created by the programmer, and to describe an entire piece of executable software. 
+	This distinction can cause enormous confusion, so this book tries to distinguish between the source code, on one hand, and the executable, on the other.
+}
+
+
+Note 2:
+Procedural, Structured, and Object-Oriented Programming
+
+Procedural:
+
+A set of specific instructions executed one after the other.
+
+
+Structured:
+
+The principal idea behind it is the idea of divide and conquer.
+Basically it can be thought as a computer program consiting of a set of smaller tasks working together to accomplish a bigger task.
+
+If you have a complex task then you can break it down into managable chunks.
+
+
+Object-Oriented:
+
+The essence of 'Object-Oriented' programming is to model 'objects'.
+Basically it allows you to add properties and/or attributes, such as age, fast, spacious, black, or wet. 
+
+
+.NET:
+
+.NET is an extension to C++ provided by Microsoft. 
+If you wish to use its advanced features you will have to extend your knowledge of standard C++ to include these extensions to the language.
+
+
+
+The ANSI Standard:
+Stands for American National Standards Institute and was made as an international standard for C++. 
+
+The C++ Standard is also referred to as the ISO (International Organization for Standardization) standard.
+
+It was made as an attempt to ensure that C++ is portable, making sure that the code you write for a Microsoft Compiler also works with any other compiler out there following the same standards.  
+
