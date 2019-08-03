@@ -90,16 +90,66 @@ My software does not require this!
 
 
 
-Workshop:
+--- Workshop ---
+
+Quiz:
 
 1. What is the difference between an interpreter and a compiler?
-A: An interpreter does  
+A: An interpreter read and runs the code on a line-to-line basis while a compiler combines an object file and a linker into an executable program.
 
 2. How do you compile the source code with your compiler?
-A: 
+A: Every compiler is different, look up a guide or manual.
 
 3. What does the linker do?
-A: 
+A: Just like the name implies, it links an object file with any needed libraries to produce an executable program. 
 
 4. What are the steps in the normal development cycle?
 A: Edit source code, compile, link, test, repeat until finished.
+
+
+
+Exercises: 
+
+1. Look at the following program and try to guess what it does without running it.
+
+#include <iostream>
+int main()
+{
+	int x = 5;
+	int y = 7;
+	std::cout << endl;
+	std::cout << x + y << “ “ << x * y;
+	std::cout << end;
+	return 0;
+}
+
+A: Declares two integers, x & y valued at 5 and 7 respectively. 
+Outputs the numbers "12 35" 
+
+--
+
+2. Type in the program from Exercise 1, and then compile and link it. What does it do? Does it do what you guessed?
+
+A: Both yes and no, I had to do some minor adjustments to get the code to compile in the first place as there was some errors in it.
+
+Once I ran it I got the results I expected.
+
+--
+
+3. Type in the following program and compile it. What error do you receive?
+
+include <iostream>
+int main()
+{
+	std::cout << “Hello World \n”;
+	return 0;
+}
+
+A: identifier "iostream" is undefined
+
+--
+
+4. Fix the error in the program in Exercise 3 and recompile, link, and run it. What does it do?
+
+A: To fix the issue I added a # before include.
+The program outputs the sentence "Hello World"
