@@ -6,11 +6,11 @@ Today, you will learn
 • How to enter, compile, and link your first working C++ program
 
 Note 1
-{
-	The word program is used in two ways: to describe individual instructions
-	(or source code) created by the programmer, and to describe an entire piece of executable software. 
-	This distinction can cause enormous confusion, so this book tries to distinguish between the source code, on one hand, and the executable, on the other.
-}
+
+The word program is used in two ways: to describe individual instructions
+(or source code) created by the programmer, and to describe an entire piece of executable software. 
+This distinction can cause enormous confusion, so this book tries to distinguish between the source code, on one hand, and the executable, on the other.
+
 
 
 Note 2:
@@ -49,3 +49,57 @@ The C++ Standard is also referred to as the ISO (International Organization for 
 
 It was made as an attempt to ensure that C++ is portable, making sure that the code you write for a Microsoft Compiler also works with any other compiler out there following the same standards.  
 
+
+
+C++ benefits/demands more than other languages that the program is pre-designed. 
+
+-- 
+DO
+DO use a simple text editor to create
+your source code, or use the built-in editor that comes with your compiler.
+DO save your files with the .c, .cp, or .cpp extension. 
+The .cpp extension is recommended.
+DO check your documentation for
+specifics about your compiler and linker
+to ensure that you know how to compile
+and link your programs.
+
+
+DON'T
+DON’T use a word processor that saves
+special formatting characters. If you do
+use a word processor, save the file as ASCII text.
+DON’T use a .c extension if your compiler treats such files as C code instead of C++ code.
+--
+
+The process of creating a program:
+
+1. Create a source code file with a .cpp extension.
+2. Compile the source code into an object file with the .obj or .o extension.
+3. Link your object file with any needed libraries to produce an executable program.
+
+
+The Development Cycle:
+Edit source code, compile, link, test (run), repeat if necessary.
+
+
+While writing/compiling your code:
+
+If you receive an error that there is no prototype for main, add the line int main();
+My software does not require this!
+
+
+
+Workshop:
+
+1. What is the difference between an interpreter and a compiler?
+A: An interpreter does  
+
+2. How do you compile the source code with your compiler?
+A: 
+
+3. What does the linker do?
+A: 
+
+4. What are the steps in the normal development cycle?
+A: Edit source code, compile, link, test, repeat until finished.
