@@ -68,3 +68,16 @@ Here’s how cout is used: Type the word cout, followed by the output redirectio
 If you want a string of characters written, be certain to enclose them in double quotes (“).
 
 \n tells cout to go to a new line.
+
+endl stands for END Line, and is prefered to be used over \n as it might not be supported on particular OS or platform(s).
+
+\t tells cout to insert a tab character
+
+float tells cout to allow decimals
+
+double tells cout that this is a floating-point value. 
+More details on this will be explained on Day 3.
+
+
+Using std:: in front of every cout and endl quickly becomes tedious. 
+You can solve this by telling the compiler that you will be using the standard library cout and endl.  
