@@ -1,0 +1,70 @@
+Day 2 Notes & Answers
+
+Today, you will learn
+• The parts of a C++ program
+• How the parts work together
+• What a function is and what it does
+
+
+Notes:
+
+Explained:
+
+#include <iostream>
+
+int main()
+{
+	std::cout << "Hello World!\n";
+	return 0;
+}
+
+# - The preprocessor
+
+The preprocessor runs before your compiler each time the compiler is
+invoked. The preprocessor translates any line that begins with a pound symbol (#) into a special command, getting your code file ready for the compiler.
+
+
+#include - preprocessor instruction
+
+The command #include tells the compiler to find the specificed file, read it and place it right here.
+
+
+<> - The angle brackets
+
+The angle brackets are placed just after the #include command.
+This is where you specify the files/libraries you want to have included.
+
+
+iostream - Input-Output-Stream
+
+iostream is used by cout, which assists with writing to the console. 
+
+
+main() - Main function
+
+The main function is special as it will start automatically along with your program. Other functions will not do this and will have to be invoked/called by code.
+
+Like any other function, main() must state what kind of value it returns. 
+In the example above it will return an integer to the Operating System to indicate it's complete.
+In this case it returns the integer value 0, as shown by "Return 0".
+
+Some compilers allows you to declare the main() function to return void. 
+This is no longer legal C++ and should be refrained from using this method. 
+Instead just have it return int, and then simply return 0 as the last line in main(). 
+
+
+
+All functions begin with an {opening brace and end with a closing brace}
+Everything between the opening and closing braces is considered part of the function.
+
+The object cout is used to prinmt a message to the screen. 
+Objects will be brought up in more detail on Day 6.
+'cout' is part of the standard library. 
+
+A library is a collection of pre-made classes available for easy use.
+The standard library comes with every compiler that follows the ANSI standard.
+
+Here’s how cout is used: Type the word cout, followed by the output redirection operator (<<). Whatever follows the output redirection operator is written to the console. 
+If you want a string of characters written, be certain to enclose them in double quotes (“).
+
+\n tells cout to go to a new line.
