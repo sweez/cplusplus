@@ -81,3 +81,229 @@ More details on this will be explained on Day 3.
 
 Using std:: in front of every cout and endl quickly becomes tedious. 
 You can solve this by telling the compiler that you will be using the standard library cout and endl.  
+
+This can be done in two ways:
+
+1. Specify what namespace you want to use for what object
+using std::cout;
+using std::endl;
+
+2. Tells the compiler that you will be using the entirety of the standard namespace.
+using namespace std;
+
+
+
+Commenting your code:
+
+There is two ways to comment your code: 
+//single-line comments
+
+/* Multi
+Line comments
+*/
+
+Multi line comments are mainly used to block out large blocks of a program, but it can also be used for commenting.
+
+
+It is strongly recommended to leave a comment at the top of each function, explaining what the function does and what value(s) it returns.
+
+Function names should be short, and to the point to make it as self-explanatory as possible. 
+
+Comments should not be used as an excuse for writing hard-to-understand code though, name your variables and functions properly and use comments to supplement understanding. 
+
+Example of commenting:
+
+1: #include <iostream>
+2:
+3: int main()
+4: {
+5:	 using std::cout;
+6:
+7:	 /* this is a comment
+8:	 and it extends until the closing
+9: 	 star-slash comment mark */
+10:	 cout << “Hello World!\n”;
+11:	 // this comment ends at the end of the line
+12:  cout << “That comment ended!\n”;
+13:
+14:  // double-slash comments can be alone on a line
+15:  /* as can slash-star comments */
+16:  return 0;
+17: }
+
+The bottom line is that comments should not say WHAT is happening, they should say WHY is happening.
+
+
+
+
+
+Functions: 
+
+A function must be either called or invoked during the course of your program. 
+main() is automatically invoked by the Operating System.
+
+A program is executed line-by-line in the order it appears in your source code until a function is reached. Then, the program branches off to execute the function. 
+
+When the function finishes, it returns control to the line of code immediately following the call to the function.
+
+A good analogy for this is sharpening your pencil. If you are drawing a picture and your pencil point breaks, you might stop drawing, go sharpen the pencil, and then return to what you were doing. 
+When a program needs a service performed, it can call a function to perform the service and then pick up where it left off when the function is finished running.
+
+
+Demonstration of calling a function
+
+#include <iostream>
+
+// function Demonstration Function
+// prints out a useful message
+void DemonstrationFunction()
+{
+	std::cout << “In Demonstration Function\n”;
+}
+
+// function main - prints out a message, then
+// calls DemonstrationFunction, then prints out
+// a second message.
+
+int main()
+{
+	std::cout << “In main\n” ;
+	DemonstrationFunction();
+	std::cout << “Back in main\n”;
+	return 0;
+}
+
+
+Functions consist of a header and a body. 
+The header consists of the return type, the function name and the parameters to that function.
+The parameters to a function enable values to be passed into the function. 
+
+Thus, if the functino were to add two numbers, the numbers would be the parameters to the function. Here's an example of a typical function header that declares a function named Sum that receives two integer values (first and second):
+
+int Sum( int first, int second)
+
+A parameter is a declaration of what type of value will be passed in; the actual value passed in when the function is called is referred to as an argument.
+
+
+The body of a function consists of an opening brace, zero or more statements, and a closing brace. The statements constitute the workings of the function
+
+
+
+
+
+
+--- Workshop ---
+
+Quiz: 
+
+1. What is the difference between the compiler and the preprocessor?
+Á: A compiler compiles the code while a preprocessor tells the compiler what libraries to include.
+The preprocessor runs first.
+
+2. Why is the function main() special?
+A: It will be automatically invoked by the program when executed and must exist in every program. 
+
+3. What are the two types of comments, and how do they differ?
+A: Single-line & multi-line comments. 
+// Single line is for one liners
+
+/* multi-line
+comments can be stretched out over several 
+lines*/ 
+
+4. Can comments be nested?
+A: No.
+
+Correction: Single-line comments can be nested within multi-line comments.
+
+5. Can comments be longer than one line?
+A: Yes, you will have to use /* */ though.
+
+
+
+Exercises:
+
+
+
+1. Write a program that writes “I love C++” to the console.
+A: 
+
+#include <iostream>
+
+int main()
+{
+    std::cout << "I love C++";
+}
+
+
+2. Write the smallest program that can be compiled, linked, and run.
+A: 
+
+int main()
+{
+
+}
+
+
+3. BUG BUSTERS: Enter this program and compile it. Why does it fail? How can you fix it?
+1: #include <iostream>
+2: main()
+3: {
+4: std::cout << Is there a bug here?”;
+5: }
+
+A: Add 'int' before the main function, add a " in front of the text string
+
+
+4. Fix the bug in Exercise 3 and recompile, link, and run it.
+A: 
+
+#include <iostream>
+
+int main()
+{
+	std::cout << "Is there a bug here ? ";
+}
+
+
+
+5. Modify Listing 2.7 to include a subtract function. Name this function Subtract() and use it in the same way that the Add() function was called. You should also pass the same values that were passed to the Add() function.
+
+A: 
+
+#include <iostream>
+int Add(int first, int second)
+{
+	std::cout << "In Add(), received " << first << " and " << second << "\n";
+	return (first + second);
+}
+
+int Substract(int first, int second)
+{
+	std::cout << "\nIn Substract(), received " << first << " and " << second << "\n";
+	return (first - second);
+}
+
+int main()
+{
+	using std::cout;
+	using std::cin;
+
+	cout << "I'm in main()!\n";
+	int a, b, c;
+	cout << "Enter two numbers: ";
+	cin >> a;
+	cin >> b;
+	
+	cout << "\nCalling Add()\n";
+	c = Add(a, b);
+	cout << "\nBack in main().\n";
+	cout << "c was set to " << c << "\n";
+
+	c = Substract(a, b);
+	cout << "\nBack in main().\n";
+	cout << "c was set to " << c;
+
+	cout << "\nExiting...\n\n";
+	return 0;
+}
