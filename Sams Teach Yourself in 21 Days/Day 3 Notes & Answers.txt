@@ -215,11 +215,118 @@ Note 10
 
 Note 11
 {
-	"long" is a shorthand version of "long int", and "short" is a shorthand version of "short int"
+	"long" is a shorthand version of "long int"
+	"short" is a shorthand version of "short int"
 }
 
 Note 12
 {
 	Define = You create the variable
 	Initialize = You assign a value to the variable
+}
+
+Note 13
+{
+	Creating aliases with typedef
+
+	typedef stands for type definition
+
+	typedef is used to avoid having to repeatedly write a phrase such as "unsigned short int". 
+
+	Basically what it does is creating a synonym.
+
+
+	Syntax:
+	typedef <existing type> <new name>;
+
+	Example: 
+	typedef unsigned short int USHORT;
+}
+
+Note 14
+{
+	When to use short and when to use long
+
+	The rule is very straight forward: If any chance exists that the value you'll want to put into your variable will be too big for its type, use a larger type.
+}
+
+Note 15
+{
+	If you wish to go higher than what 'unsigned long integers' can hold then you will have to go to float or double, but at the expense of some precision. 
+}
+
+Note 16
+{
+	Wrapping around an unsigned integer
+
+	When an unsigned integer reaches it maximum value it will wrap around and start over. 
+}
+
+Note 17
+{
+	type char variables are typically 1 byte, enough to hold 256 values.
+	A char can be interpreted as a small number (0-255) or as a member of the ASCII set.
+
+	As an example, "a" is assigned the value 97.
+}
+
+Note 18
+{
+	The Escape Characters
+
+	The compiler will recognize some special characters for formatting. 
+	
+	To put a tab character into your code, you enter a single quotation mark, the slash, the letter t, and then a closing single quotation mark:
+
+	char tabCharacter = ‘\t’;
+
+	The escape character (\) changes the meaning of the character that follows it. As an example, normally the character n means the letter n, but when it is preceded by the escape character, it means new line.
+
+CHARACTER 	WHAT IT MEANS
+	\a 		Bell (alert)
+	\b 		Backspace
+	\f 		Form feed
+	\n 		New line
+	\r 		Carriage return
+	\t 		Tab
+	\v 		Vertical tab
+	\’ 		Single quote
+	\” 		Double quote
+	\? 		Question mark
+	\\ 		Backslash
+	\000 	Octal notation
+	\xhhh 	Hexadecimal notation
+}
+
+Note 19
+{
+	Constants
+
+	Unlike variables, and just as the name implies, constants don't change - they remain constant.
+	You must initialize a constant when you create it.
+
+
+	Literal Constants
+
+	A literal constant is a value typed directly into your program wherever it is needed. 
+
+	Example:
+	int myAge = 39;
+
+	//
+
+	Symbolic Constants
+
+	A symbolic Constants is a constant that is represented by a name, just as a variable is represented.
+	Unlike a variable, however, after a constant is initialized, its value can not be changed.
+
+
+	If your program has an integer variable named students and another named classes, you could compute how many students you have, given a known number of classes, if you knew each class consisted of 15 students:
+
+	students = classes * 15;
+
+
+	In this example, 15 is a literal constant. Your code would be easier to read, and easier to maintain, if you substituted a symbolic constant for this value:
+	
+	students = classes * studentsPerClass
 }
