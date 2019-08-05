@@ -1,0 +1,6 @@
+Notes for C++
+
+Constants should be written in ALL CAPS for easy identification
+
+unsigned: positive 
+signed: negative & positive
