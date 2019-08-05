@@ -183,3 +183,43 @@ Note 8
 	DON’T use unsigned variables for negative numbers.
 }
 
+Note 9
+{
+	Creating more than one variable at a time
+
+	You can create more than one variable of the same type in one statement/line by writing the type and then the variable names, separated by commas.
+
+	Examples:
+	unsigned int myAge, myWeight; // two unsigned int variables
+	long int area, width, length; // three long integers
+}
+
+Note 10
+{
+	Assigning values to your variables
+
+	You can assign a value to a variable using the assignment operator (=).
+
+	unsigned short width;
+	width = 5;
+
+	You can combine those two lines into one, making it more compact.
+
+	unsigned short width = 5;
+
+
+	It's also possible to initialize more than one variable at creation.
+
+	long width = 5, length = 7;
+}
+
+Note 11
+{
+	"long" is a shorthand version of "long int", and "short" is a shorthand version of "short int"
+}
+
+Note 12
+{
+	Define = You create the variable
+	Initialize = You assign a value to the variable
+}
