@@ -129,6 +129,57 @@ Note 6
 
 
 	When a variable is declared memory will be allocated (set aside) for it. 
-
-
 }
+
+Note 7
+{
+	Naming Conventions
+
+	There's different conventions for how to name variables, though it does not matter too much which method you adopt. 
+	The important part is to stay consistent throughout your program.
+
+
+	Many programmers prefer to use all lowercase letters for their variable names. 
+	If the name requires two words (for example, my car), two popular conventions are used: my_car or myCar. 
+
+	The latter form is called camel notation because the capitalization looks something like a camel’s hump.
+
+
+	List of keywords not allowed to be used in variable names as they have special meaning already.
+
+	asm 			else 		new 				this
+	auto 			enum 		operator 			throw
+	bool 			explicit 	private 			true
+	break 			export 		protected 			try
+	case 			extern 		public 				typedef
+	catch 			false 		register 			typeid
+	char 			float 		reinterpret_cast 	typename
+	class 			for 		return 				union
+	const 			friend 		short 				unsigned
+	const_cast 		goto 		signed 				using
+	continue 		if 			sizeof 				virtual
+	default 		inline 		static 				void
+	delete 			int 		static_cast 		volatile
+	do 				long 		struct 				wchar_t
+	double 			mutable 	switch 				while
+	dynamic_cast 	namespace 	template
+	
+	In addition, the following words are reserved:
+	And 			bitor 		not_eq 				xor
+	and_eq 			compl 		or 					xor_eq
+	bitand 			not 		or_eq
+}
+
+Note 8
+{
+	DO define a variable by writing the type, then the variable name.
+	DO use meaningful variable names.
+	DO remember that C++ is case sensitive.
+	DO understand the number of bytes each variable type consumes in memory and what values can be stored in variables of that type.
+
+
+	DON’T use C++ keywords as variable names.
+	DON’T make assumptions about how many bytes are used to store a variable.
+	DON’T use unsigned variables for negative numbers.
+}
+
