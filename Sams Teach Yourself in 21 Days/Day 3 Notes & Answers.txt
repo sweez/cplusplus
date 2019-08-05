@@ -1,0 +1,134 @@
+Day 3 Notes & Answers
+
+Page 42-66
+
+Today, you will learn
+• How to declare and define variables and constants
+• How to assign values to variables and manipulate those values
+• How to write the value of a variable to the screen
+
+Note 1
+{
+	What is a variable? 
+
+	A variable is a place to store information that you can retrieve for later use. 
+
+	Take note that variables are used for temporary storage, so by exiting your program or turning your computer off, the information will be lost into the void to never be seen again.
+}
+
+Note 2
+{
+	Storing data in memory
+
+	Your computer’s memory can be viewed as a series of cubbyholes. Each cubbyhole is one of many, many such holes all lined up. Each cubbyhole—or memory location—is numbered sequentially. These numbers are known as memory addresses. 
+	
+	A variable reserves one or more cubbyholes in which you can store a value.
+
+	Your variable’s name (for example, myVariable) is a label on one of these cubbyholes so that you can find it easily without knowing its actual memory address.
+}
+
+Note 3
+{
+	Size of integers
+
+	On any one computer, each variable type takes up a single, unchanging amount of room.
+	
+	That is, an integer might be two bytes on one machine and four on another, but on either computer it is always the same, day in and day out.
+	
+	Single characters—including letters, numbers, and symbols—are stored in a variable of type char. A char variable is most often one byte long. 
+
+	For smaller integer numbers, a variable can be created using the short type. A short integer is two bytes on most computers, a long integer is usually four bytes, and an integer (without the keyword short or long) is usually two or four bytes.
+
+	The size of an integer is determined by the processor (16 bit, 32 bit, or 64 bit) and the compiler you use. On a 32-bit computer with an Intel Pentium processor, using modern compilers, integers are four bytes. 
+}
+
+Note 4
+{
+	New operator - sizeof(parameter)
+
+	The sizeof operator is used like a function. 
+	When called it will tell you the size of the specified item (parameter).
+}
+
+Note 5
+{
+	signed and unsigned
+
+	All integer types are either signed or unsigned.
+	Use signed if you need both negative and positive numbers
+	Use unsigned if you always need it to be positive.
+
+	If not specified otherwise it will automatically be set as signed.
+
+
+	Integers will be the same storage size no matter whether you use signed or unsigned
+
+	signed short can store from -32 768 to 32 767
+	unsigned short can store from 0 to 65 535
+}
+
+Note 6
+{
+	Variable types
+
+	TYPE 					SIZE 		VALUES
+	bool 					1 byte 		true or false
+	unsigned short int 		2 bytes 	0 to 65,535
+	short int 				2 bytes 	–32,768 to 32,767
+	unsigned long int 		4 bytes 	0 to 4,294,967,295
+	long int 				4 bytes 	–2,147,483,648 to 2,147,483,647
+	int (16 bit) 			2 bytes 	–32,768 to 32,767
+	int (32 bit) 			4 bytes 	–2,147,483,648 to 2,147,483,647
+	unsigned int (16 bit) 	2 bytes 	0 to 65,535
+	unsigned int (32 bit) 	4 bytes 	0 to 4,294,967,295
+	char 					1 byte 		256 character values
+	float 					4 bytes 	1.2e–38 to 3.4e38
+	double 					8 bytes 	2.2e–308 to 1.8e308
+}
+
+Note 6
+{
+	Defining a Variable
+
+	To create/define a variable you have to state its type, followed with one or more spaces, followed by a variable name and a semicolon.
+
+	The variable name can be virtually any combination of letters, but it can not contain any spaces! 
+	
+	It's also important to note that it's case sensitive! 
+	A variable named age is different from Age, which is different from AGE.
+
+	Examples of legal Variable names:
+	x, j23qrsnf, and myAge
+
+	Try to keep the variable names short and easy-to-understand though.
+	This will help both yourself and anyone else who might take a look at your code to quickly understand what's going on.
+
+	Here's one bad and one good example of naming your variables.
+
+		Example 1
+		int main()
+		{
+		unsigned short x;
+		unsigned short y;
+		unsigned short z;
+		z = x * y;
+		return 0;
+		}
+
+
+
+		Example 2
+		int main()
+		{
+		unsigned short Width;
+		unsigned short Length;
+		unsigned short Area;
+		Area = Width * Length;
+		return 0;
+		}
+
+
+	When a variable is declared memory will be allocated (set aside) for it. 
+
+
+}
