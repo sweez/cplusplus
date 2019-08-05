@@ -197,7 +197,7 @@ The body of a function consists of an opening brace, zero or more statements, an
 Quiz: 
 
 1. What is the difference between the compiler and the preprocessor?
-Á: A compiler compiles the code while a preprocessor tells the compiler what libraries to include.
+A: A compiler compiles the code while a preprocessor tells the compiler what libraries to include.
 The preprocessor runs first.
 
 2. Why is the function main() special?

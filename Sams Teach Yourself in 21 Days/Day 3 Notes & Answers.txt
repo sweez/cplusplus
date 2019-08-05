@@ -55,8 +55,9 @@ Note 5
 	signed and unsigned
 
 	All integer types are either signed or unsigned.
-	Use signed if you need both negative and positive numbers
-	Use unsigned if you always need it to be positive.
+	
+	signed: Negative & Positive
+	unsigned: Positive
 
 	If not specified otherwise it will automatically be set as signed.
 
@@ -302,11 +303,12 @@ Note 19
 {
 	Constants
 
+	Like variables, constants are used for storing values.
 	Unlike variables, and just as the name implies, constants don't change - they remain constant.
 	You must initialize a constant when you create it.
 
 
-	Literal Constants
+	-- Literal Constants --
 
 	A literal constant is a value typed directly into your program wherever it is needed. 
 
@@ -315,7 +317,7 @@ Note 19
 
 	//
 
-	Symbolic Constants
+	-- Symbolic Constants --
 
 	A symbolic Constants is a constant that is represented by a name, just as a variable is represented.
 	Unlike a variable, however, after a constant is initialized, its value can not be changed.
@@ -329,4 +331,141 @@ Note 19
 	In this example, 15 is a literal constant. Your code would be easier to read, and easier to maintain, if you substituted a symbolic constant for this value:
 	
 	students = classes * studentsPerClass
+
+
+	The main benefit of using a symbolic constant over a literal constant is that if you later decided to change the number of students in each class, you would just have to change it in one place rather than having to make a change in every place where you placed that value.
+}
+
+Note 20
+{
+	Defining Constants with #define
+
+	NOTE: This methos is obsolete and should no longer be used!!
+
+	Back in the day, when you wanted to define a constant you would do:
+
+	#define studentsPerClass 15
+
+	Because that studentsPerClass is of no particular type (int, char, etc) the preprocessor only sees the number 15.
+}
+
+Note 21
+{
+	Defining Constants with const
+
+	A much better alternative to #define when it comes to define constants.
+
+	const unsigned short int studentsPerClass = 15;
+
+	The example above is declared as a symbolic constant named studentsPerClass, but this type its typed as an unsigned short int.
+
+	This method of declaring constants has several advantages in making your code easier to maintain and in preventing bugs.
+
+	The main difference is that this constant has a type, and the compiler can enforce it accordingly.
+}
+
+Note 22
+{
+	DO watch for numbers overrunning the size of the integer and wrapping around incorrect values.
+	DO give your variables meaningful names that reflect their use.
+
+	DON’T use keywords as variable names.
+	DON’T use the #define preprocessor directive to declare constants. Use const.
+}
+
+Note 23
+{
+	Enumerated Constants
+
+	The syntax is as follows: 
+	enum <NAME> {VALUE1, VALUE2, ETC3};
+
+	Example 1:
+	enum COLOR { RED, BLUE, GREEN, WHITE, BLACK };
+				  0     1     2      3      4
+
+	I have assigned the values of each color for an easier understanding how it works. 
+
+	Every enumerated constant has an integer value. 
+	Unless specified otherwise, the first constant has the value 0, and the rest count up from there. 
+
+	However, any one of the constants can be initialized with a specific value, and those not initialized count upward from the ones before them. Example below.
+
+	Example 2:
+	enum Color { RED=100, BLUE, GREEN=500, WHITE, BLACK=700 };
+				   100     101	   500      501      700
+}
+
+
+
+
+--- Workshop --- 
+
+{	Quiz:
+
+	1. What is the difference between an integer variable and a floating-point variable?
+	A: floating-point variables can store fractions while integer variables can not.
+
+
+	2. What are the differences between an unsigned short int and a long int?
+	A: An unsigned short int can only contain positive integers, can store values up to 65 353.
+	long int can store values between -2 147 483 648 to 2 147 483 647
+
+
+
+	3. What are the advantages of using a symbolic constant rather than a literal constant?
+	A: It makes it easier to maintain larger codes as you only have to change the value in one place rather than every place you assigned it to one by one. 
+
+	4. What are the advantages of using the const keyword rather than #define?
+	A: #define is obsolete. Using const keyword makes the code easier to maintain and helps prevent bugs to slip in. 
+	The main difference is that the constant has a type, and the compiler can enforce it accordingly.
+
+
+	5. What makes for a good or bad variable name?
+	A: Good: A short, descriptive name that clearly states its purpose. 
+	Bad: A long, complicated & cryptic name that does not indicate what it's for, forcing the programmer to backtrack.
+
+
+	6. Given this enum, what is the value of BLUE?
+	enum COLOR { WHITE, BLACK = 100, RED, BLUE, GREEN = 300 };
+	A: That's simple, 102.
+
+
+	7. Which of the following variable names are good, which are bad, and which are invalid?
+		a. Age 			Good 	+
+		b. !ex 			Invalid +
+		c. R79J 		Bad 	+
+		d. TotalIncome	Good 	+
+		e. __Invalid	Invalid - 
+}
+
+
+
+{	Exercises:
+	
+	1. What would be the correct variable type in which to store the following information?
+		a. Your age
+		b. The area of your backyard
+		c. The number of stars in the galaxy
+		d. The average rainfall for the month of January
+	A: 
+		a: unsigned short int
+		b: unsigned short
+		c: unsigned double
+		d: unsigned short int
+
+
+	2. Create good variable names for this information.
+	A: 
+		a: yourAge
+		b: backyardArea
+		c: starsInGalaxy
+		d: averageRainfall
+
+	3. Declare a constant for pi as 3.14159.
+	A: unsigned float constant pi = 3.14159 -
+	Correction: const float PI  = 3.14159;
+
+	4. Declare a float variable and initialize it using your pi constant.
+	A: float myPi = PI;
 }
