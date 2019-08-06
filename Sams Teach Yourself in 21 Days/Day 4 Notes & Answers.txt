@@ -1,0 +1,324 @@
+Day 4 Notes & Answers
+
+Today, you will learn
+• What statements are
+• What blocks are
+• What expressions are
+• How to branch your code based on conditions
+• What truth is, and how to act on it
+
+
+Note 1
+{
+	Statements
+
+	All statements must end with a semicolon;
+
+	The assignment operator assigns whatever is on the right side of the equal sign to whatever is on the left side.
+
+	x = a + b;
+
+	This means that x is a+b COMBINED.
+}
+
+Note 2
+{
+	Whitespace
+
+	Whitespace is generally ignored by the compiler.
+}
+
+Note 3
+{
+	Blocks and compund statements
+
+	Any place you can put a single statement, you can put in a compound statement, also known as a block. A block begins and ends with { }
+}
+
+Note 4
+{
+	DO end your statements with a semicolon.
+	DO use whitespace judiciously to make your code clearer.
+
+	DON’T forget to use a closing brace any time you have an opening brace.
+}
+
+Note 5
+{
+	Expressions
+
+	Anything that evaluates to a value is an expression. 
+	All expressions are statements.
+
+	Three examples:
+	3.2 				// returns the value 3.2
+	PI 					// float constant that returns the value 3.14
+	SecondsPerMinute 	// int constant that returns 60
+}
+
+Note 6
+{
+	Working with Operators
+
+	An operator is a symbol that causes the compiler to take an action. 
+	There are several categories of operators that exist.
+
+	Two of them are:
+	Assignment Operators
+	Mathematical Operators
+
+
+
+	Assignment Operators
+
+	Used as =
+
+	This operator causes the operand on the left side of the = to have its value changed to the value of the expression on the right side of the assignment operator.
+
+	Example:
+
+	x = a + b;
+	Assigns the value that is the result of adding a and b to the operand x.
+
+
+
+	Mathematical Operators
+
+	Five mathematical operators are
+	Addition +
+	Substraction -
+	Multiplication *
+	Division /
+	and modulus %
+
+	result = 56 + 32 	// result = 88
+	result = 12 – 10 	// result = 2
+	result = 21 / 7  	// result = 3
+	result = 12 * 4  	// result = 48
+
+}
+
+Note 7
+{
+	To get a fractional return value, you must use floating-point numbers (type float, double, or long double).
+}
+
+Note 8
+{
+	Incrementing and Decrementing
+
+	The most common value to add or substract to/from a variable is 1.
+
+	Increasing the value by 1 is called incrementing
+	Decreasing the value by 1 is called decrementing
+
+	increment: ++
+	decrement: -- 
+}
+
+Note 9
+{
+	DO remember that expressions have avalue.
+	DO use the prefix operator (++variable)
+	to increment or decrement the variable before it is used in the expression.
+	DO use the postfix operator (variable++)
+	to increment or decrement the variable after it is used.
+	DO use parentheses to change the order of precedence.
+
+	DON’T nest too deeply because the expression becomes hard to understand and maintain.
+	DON’T confuse the postfix operator with the prefix operator
+}
+
+Note 10
+{
+	The nature of truth
+
+	Every expression can be evaluated for its truth or falsity. 
+	Expressions that evaluate mathematically to zero return false; all others return true. 
+}
+
+Note 11
+{
+	Equals 						==		100 == 50;		false
+										50 == 50;		true
+
+	Not equals 					!=		100 != 50; 		true
+										50 != 50; 		false
+
+	Greater than 				> 		100 > 50; 		true
+										50 > 50; 		false
+
+	Greater than or equal to 	>=		100 >= 50; 		true
+										50 >= 50; 		true
+
+	Less than					<		100 < 50; 		false
+										50 < 50; 		false
+
+	Less than or equal to 		<= 		100 <= 50; 		false
+										50 <=50; 		true
+}
+
+Note 12
+{
+	DO remember that relational operators return the value true or false.
+
+	DON’T confuse the assignment operator (=) with the equals relational operator (==). 
+	This is one of the most common C++ programming mistakes—be on guard for it.
+}
+
+Note 13
+{
+	The if Statement
+
+	The if statement enables you to test for a condition (such as whether two variables are equal) and then branch to different parts of your code depending on the result.
+
+	Syntax:
+	if (expression)
+		statement;
+
+	Example:
+	if (bigNumber > smallNumber)
+		bigNumber = smallNumber;
+
+	This code compares bigNumber with smallNumber, if it is true then it will execute the statement, which it does in this case.
+}
+
+Note 14
+{
+	DO put parentheses around your logical tests to make them clearer and to make the precedence explicit.
+	DO use braces in nested if statements to make the else statements clearer and to avoid bugs.
+
+	DON’T use if(x) as a synonym for if(x != 0); the latter is clearer.
+	DON’T use if(!x) as a synonym for if(x == 0); the latter is clearer.
+}
+
+Note 15
+{
+	The Conditional (Ternary) Operator
+
+	The conditional operator takes three expressions and returns a value:
+	(expression1) ? (expression2) : (expression3)
+
+	This line reads as “If expression1 is true, return the value of expression2; otherwise, return the value of expression3.”
+
+	Typically this would be assigned to a variable.
+}
+
+
+
+--- Workshop --- 
+
+Quiz
+{
+	1. What is an expression? +
+	A: An expression is something that returns a value
+
+
+	2. Is x = 5 + 7 an expression? What is its value? + 
+	A: Yes. x = 12
+
+
+	3. What is the value of 201 / 4? +
+	A: 50
+
+
+	4. What is the value of 201 % 4? -
+	A: 
+	Correction: 1
+
+	5. If myAge, a, and b are all int variables, what are their values after - 
+		myAge = 39;
+		a = myAge++;
+		b = ++myAge;
+	A: 40
+	Correction: myAge: 41, a: 39, b: 41
+
+
+	6. What is the value of 8+2*3? + 
+	A: 14
+
+	7. What is the difference between if(x = 3) and if(x == 3)? + 
+	A: The first if statement assigns the number 3 to x and is interpreted as true
+	The second statement checks if x equals to 3
+
+
+
+	8. Do the following values evaluate true or false?
+		a. 0
+		b. 1
+		c. –1
+		d. x = 0
+		e. x == 0 // assume that x has the value of 0
+	A: 
+	a: false +
+	b: true + 
+	c: false -
+	d: false + 
+	e: true + 
+}
+
+
+
+Exercises
+{
+	1. Write a single if statement that examines two integer variables and changes the larger to the smaller, using only one else clause. + 
+	A: if (bigNumber > smallNumber)
+		{
+			bigNumber = smallNumber
+		}
+
+		else
+		{
+			smallNumber = bigNumber
+		}
+
+
+	2. Examine the following program. Imagine entering three numbers, and write what output you expect.
+
+		1: #include <iostream>
+		2: using namespace std;
+		3: int main()
+		4: {
+		5: int a, b, c;
+		6: cout << “Please enter three numbers\n”;
+		7: cout << “a: “;
+		8: cin >> a;
+		9: cout << “\nb: “;
+		10: cin >> b;
+		11: cout << “\nc: “;
+		12: cin >> c;
+		13:
+		14: if (c = (a-b))
+		15: cout << “a: “ << a << “ minus b: “ << b <<
+		16: _” equals c: “ << c;
+		17: else
+		18: cout << “a-b does not equal c: “;
+		19: return 0;
+		20: }
+
+	A: a = 15, b = 10, c = 5
+	output: a-b does not equal c: 
+
+
+	3. Enter the program from Exercise 2; compile, link, and run it. Enter the numbers 
+	20, 10, and 50. Did you get the output you expected? Why not? +
+	A: I got the output I expected, it does not equal to c. 
+
+
+
+	4. Examine this program and anticipate the output:
+		1: #include <iostream>
+		2: using namespace std;
+		3: int main()
+		4: {
+		5: int a = 2, b = 2, c;
+		6: if (c = (a-b))
+		7: cout << “The value of c is: “ << c;
+		8: return 0;
+		9: }
+	Enter, compile, link, and run the program from Exercise 4. What was the output? Why? -
+	A: The output is "The value of c is: 0"
+	If not initialized it's defaulted to 0
+
+	Correction: Because line 6 is assigning the value of a-b to c, the value of the assignment is a (2) minus b (2), or 0. Because 0 is evaluated as false, the if fails and nothing is printed
+}

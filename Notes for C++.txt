@@ -1,6 +1,11 @@
 Notes for C++
 
 Constants should be written in ALL CAPS for easy identification
+Used when you have values that never change.
+
+
 
 unsigned: positive 
 signed: negative & positive
+
+Unless specified otherwise, signed is default.
