@@ -1,0 +1,65 @@
+Day 5 Notes & Answers
+
+Today, you will learn
+• What a function is and what its parts are
+• How to declare and define functions
+• How to pass parameters into functions
+• How to return a value from a function
+
+Note 1
+{
+	What is a function?
+
+	In short terms it is a subprogram that can act on data and return a value. 
+
+	Every C++ program has at least one function, main().
+	The main function is automatically called upon when you execute your program.
+
+	main() might call other functions, some of which might call still others.
+
+	Those functions are not part of an object, which is why they are referred to as "global". 
+	What that means is that they can be accessed from anywhere within your program. 
+
+
+	Each function has its own name, and when that name is encountered in your code, the execution of the program branches to the body of that function. 
+	
+	This process is referred to as calling the function. 
+
+	Once the function is finished, execution resumes on the next line of the calling function.
+
+
+	A well-designed function performs a single, specific, and easily understood task, identified by the function name. 
+
+	Complicated tasks should be broken down into multiple functions!
+
+	
+
+	Functions come in two varieties: user defined and built-in.
+
+	Built-in are part of the compiler, provided by the manufacturer. 
+	User-defined functions are the functions you write yourself.
+}
+
+Note 2
+{
+	A function can receive values, process it, and then return a value.
+
+	The latter one is called a return value, and the type of return value must be declared.
+
+	Example 1:
+	int myFunction();
+
+	Here a function named myFunction is declared and will return an integer value. 
+
+	Example 2:
+	int myFunction(int someValue, float someFloat);
+
+	This declaration indicates that myFunction will still return an vinteger, but it will also take two values.
+}
+
+Note 3
+{
+	Sending values INTO a function
+
+	
+}

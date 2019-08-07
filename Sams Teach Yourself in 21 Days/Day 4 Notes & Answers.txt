@@ -273,7 +273,7 @@ Exercises
 		}
 
 
-	2. Examine the following program. Imagine entering three numbers, and write what output you expect.
+	2. Examine the following program. Imagine entering three numbers, and write what output you expect. +
 
 		1: #include <iostream>
 		2: using namespace std;
