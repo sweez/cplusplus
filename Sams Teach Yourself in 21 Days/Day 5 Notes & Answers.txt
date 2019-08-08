@@ -61,5 +61,172 @@ Note 3
 {
 	Sending values INTO a function
 
+	When values are sent into a function they will act as variables that can be manipulated within the function. 
+	The description of the values you send is called a parameter list.
+
+	In the previous example, the parameter list contains someValue that is a variable of type integer and someFloat that is a variable of type float.
+
+
+	A parameter describes the type of the value that will be passed into the function when the function is called. 
+	The actual values you pass into the function are called the arguments. 
+
+	Example 1:
+	{
+		int theValueReturned = myFunction(5,6.7);
+
+		//Here is an integer variable named theValueReturned
+		//is initialized with the value returned by myFunction
+		//and that the values 5 and 6.7 are passed in as arguments.
+	}
+}
+
+Note 4
+{
+	Declaring and Defining Functions
+
+	To use functions in your program first requires said function to be declared, and that you also define it. 
+
+	The declaration tells the compiler the name, return type, and parameters of the function. 
+
+
+	A declaration of a function is called a prototype.
+
+	Three ways exist to declare a function.
+	• Write your prototype into a file, and then use the #include directive to include it in your program.
+	• Write the prototype into the file in which your function is used.
+	• Define the function before it is called by any other function. When you do this, the definition acts as its own prototype. 
+}
+
+Note 5
+{
+	Parts of a function prototype
+
+	unsigned short int 	FindArea 	(int length, int width);
+	   return type		  name 			parameters
+
+	int = parameter type
+	length & width = parameter name
+
+
+	{ - Opening Brace
+
+		// Statements
+
+	} - Closing Brace
+}
+
+Note 6
+{
+	It is possible to define a function before using it, and thus avoid the necessity of creating a function prototype, this is not good programming practice for three reasons.
+
+	First, it's bad to require that functions appear in a file in a particular order. Makes it hard to maintain the program when requirements change.
+
+	Second, it is possible that function A() needs to be able to call function B(), but function B() also needs to be able to call function A() under some circumstances. 
+	It is not possible to define function A() before you define function B() and also to define function B() before you define function A(), so at least one of them must be declared in any case
+
+	Third, function prototypes are a good and powerful debugging technique. 
+	If your prototype declares that your function takes a particular set of parameters or that it returns a particular type of value, and then your function does not match the prototype, the compiler can flag your error instead of waiting for it to show itself when you run the program. 
+	This is like double-entry bookkeeping. The prototype and the definition check each other, reducing the likelihood that a simple typo will lead to a bug in your program.
+}
+
+Note 7
+{
+	If your function does not actually return a value, you declare its return type to be void as shown here:
 	
+	void printNumber( int myNumber);
+
+	This declares a function called printNumber that has one integer parameter. Because void is used as the return time, nothing is returned.
+}
+
+Note 8
+{
+	Determining Variable Scope
+
+	A variable has a scope, which determines how long it is available for in your program.
+	Variables declared within a block are scoped to that block; they can be accessed only within that block's braces {}
+
+	Global Scope
+
+	A global scope is available everywhere in your program
+
+	
+	Local Scope
+
+	A local scope is only available within the body of a function
+	When the function returns, the local variables are no longer available and will be marked for destruction by the compiler.
+}
+
+Note 9
+{
+	Global Variables
+
+	Variables defined outside of any function have global scope, and thus are available from any function in the program, including main().
+
+
+	Local variables with the same name as global variables will not change the global variables.
+
+	If a function has a variable with the same name as a global variable, the name will refer to the local variable, and not the global one, when used within the function.
+}
+
+Note 10
+{
+	Even though there is no real limits to the size of a function, well-designed functions tend to be small. 
+
+	It's recommended by many programmers, as a rule of thumb, to keep your functions short enough to fit on a single screen so that you can see the entire function at once.
+
+	Each function should carry out a single, easily understood task.
+	If it's getting too large, look for places where you can cut it into smaller tasks.
+}
+
+Note 11
+{
+	Overloading functions
+
+	It is possible to create more than one function with the same name.
+	For it to work you just simply have to make sure their parameter list is different to each other.
+
+	Example 1:
+
+	int myFunction (int, int);
+	int myFunction (long, long);
+	int myFunction (long);
+
+
+	Rather than making this
+	Example 2:
+
+	int DoubleInt(int);
+	long DoubleLong(long);
+	float DoubleFloat(float);
+	double DoubleDouble(double);
+
+	You can do this with the help of function overloading:
+
+	int Double(int);
+	long Double(long);
+	float Double(float);
+	double Double(double);
+
+	Which is easier to read and use.
+	You don't have to worry about which one to call; you just pass in a variable and the right function is called automatically.
+}
+
+Note 12
+{
+	Recursion
+
+	A function can call itself. This is called recursion.
+	It can be either direct or indirect.
+	
+	It is direct when a function calls itself.
+	It is indirect when a function calls another function that then calls the first function.
+
+	
+	It is important to note that when a function calls itself, a new copy of that function is run.
+
+	What this means is that the local variables in the second version are independent of the local variables in the first, and they cannot affect one another directly, any more than the local variables in main() can affect the local variables in any function it calls.
+
+
+
+	Recursive functions needs a stop condition or it will keep on going forever.
 }
