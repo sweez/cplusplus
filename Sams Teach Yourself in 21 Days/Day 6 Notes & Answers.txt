@@ -1,0 +1,21 @@
+Day 6 Notes & Answers
+
+Today, you will learn
+• What classes and objects are
+• How to define a new class and create objects of that class
+• What member functions and member data are
+• What constructors are and how to use them
+
+Note 1
+{
+	Introducing Classes and Members
+
+	You can make a new type in C++ by declaring a class.
+
+	A class is a collection of variables - often of different types - combined with a set of related functions.
+
+	One way to see a class is by imagining a car as a collection of wheels, doors, seats, windows, and so forth. 
+	Another way to think about what a car can do: it can move, speed up, slow down, stop, park, and so on. 
+
+	A class enables you to encapsulate, or bundle, these various parts and functions into one collection, which is called an object.
+}
