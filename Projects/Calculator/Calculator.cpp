@@ -2,32 +2,44 @@
 // Requested by JK
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
+	string divider = "==========================================="; //Added the divider as string to save place in the code
 	char op;
 	float numbOne, numbTwo;
 	bool loopa = true;
+	bool menuloop = true;
 
-	cout << "===========================================" << endl;
-	cout << "*** Calculator - version 0.3 ***" << endl;
+	cout << divider << endl;
+	cout << "*** Calculator - version 0.4 ***" << endl;
 
 	while (loopa == true) //Infinite loop, for now
 	{
+		while (menuloop == true)
+		{
+			cout << divider << endl;
+			cout << "Available operators:" << endl;
+			cout << "+ - / *" << endl;
+			cout << "Q = If you wish to exit the program" << endl << endl;
+			cout << "Please enter one of the operators listed above: ";
+			cin >> op;
 
-		cout << "===========================================" << endl;
-		cout << "Available operators:" << endl;
-		cout << "+ - / *" << endl;
-		cout << "Q = If you wish to exit the program" << endl << endl;
-		cout << "Please enter one of the operators listed above: ";
-		cin >> op;
+			if (op == '+' || op == '-' || op == '/' || op == '*')//Makes sure the input is valid
+			{
+				menuloop = false;
+				break;
+			}
 
-		/* old block
-		cout << "===========================================" << endl;
-		cout << "\nEnter operator, either + or - or / or *: ";
-		cin >> op;
-		*/
+			else//If it's not valid then error will be thrown at the user
+			{
+				cout << "Error! Invalid input..\n\n";
+			}
+
+		}//END MENULOOP
+
 		if (op == 'q' || op == 'Q') //Checks if op equals to Q, if yes then terminate the program
 		{
 			cout << "Terminating program.. " << endl;
@@ -37,7 +49,6 @@ int main()
 
 		else
 		{
-
 
 			cout << "\nEnter two numbers:" << endl;
 			cin >> numbOne >> numbTwo; //User inputs desired values the user wants to be in the equation
@@ -59,10 +70,12 @@ int main()
 			case '*':
 				cout << "\nThe answer is: " << numbOne * numbTwo << endl << endl;
 				break;
-
+			
+			/* //No longer necessary as the check was moved up to before the switch.
 			default: //If no match was found above then the error code will be run.
 				cout << "\nError! invalid operator" << endl << endl;
 				break;
+			*/
 			}//END SWITCH
 		}//END ELSE
 	} //END LOOP
@@ -78,4 +91,9 @@ Combined line 22 & 23 with each other as the second cin was redundant
 CHANGELOG 0.3
 Remade the menu system
 The user can now escape the program
+
+
+Changelog 0.4
+Cleaned up the code a bit
+Moved the check operator check to before the switch
 */
