@@ -19,3 +19,8 @@ Note 1
 
 	A class enables you to encapsulate, or bundle, these various parts and functions into one collection, which is called an object.
 }
+
+Note 2
+{
+	
+}
